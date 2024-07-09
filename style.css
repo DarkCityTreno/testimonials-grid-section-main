@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Primary */
+
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Neutral */
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* Opacity */
+
+  --Opacity-white-50: rgb(255, 255, 255, 0.5);
+  --Opacity-white-70: rgb(255, 255, 255, 0.3);
+
+  --Opacity-very-dark-greyish-blue-50: rgb(72, 85, 106, 0.5);
+  --Opacity-Very-dark-greyish-blue-70: rgb(72, 85, 106, 0.3);
+
+  --Opacity-light-greyish-blue-50: rgb(236, 242, 248, 0.5);
+  --Opacity-light-greyish-blue-70: rgb(236, 242, 248, 0.3);
+
+  /* Fonts */
+  --Poppins: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--Poppins);
+  background-color: var(--Light-grayish-blue);
+}
+
+p {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+img {
+  border-radius: 50%;
+  width: fit-content;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  padding: 0.3rem;
+  gap: 1.5rem;
+}
+
+main > * {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 57%);
+}
+
+section p {
+  font-size: 13px;
+}
+
+/* SECTIONS FONTS/BACKGROUND STYLING */
+
+.daniel-section {
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 3%;
+  background-color: var(--Moderate-violet);
+  color: var(--White);
+}
+
+.daniel-graduate,
+.jonathan-graduate,
+.patrick-graduate {
+  color: var(--Opacity-white-50);
+}
+
+.daniel-review,
+.jonathan-review,
+.patrick-review {
+  color: var(--Opacity-white-70);
+}
+
+.jonathan-section {
+  background-color: var(--Very-dark-grayish-blue);
+  color: var(--White);
+}
+
+.jeanette-section,
+.kira-section {
+  color: var(--Very-dark-grayish-blue);
+  background-color: var(--White);
+}
+
+.kira-graduate,
+.jeanette-graduate {
+  color: var(--Opacity-very-dark-greyish-blue-50);
+}
+
+.kira-review,
+.jeanette-review {
+  color: rgb(0, 0, 0, 0.3);
+}
+
+.patrick-section {
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--Light-grayish-blue);
+}
+
+.authors {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1000px) {
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100svh;
+  }
+
+  main {
+    max-width: 90rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  main > * {
+    padding: 1rem 2.5rem;
+  }
+
+  .daniel-section {
+    grid-column: 1 / span 2;
+  }
+
+  .jeanette-section {
+    grid-column: 1;
+  }
+
+  .patrick-section {
+    grid-column: 2;
+    grid-column: 2 / span 2;
+  }
+
+  .kira-section {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
