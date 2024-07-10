@@ -91,7 +91,7 @@ section p {
 .daniel-review,
 .jonathan-review,
 .patrick-review {
-  color: var(--Opacity-white-70);
+  color: var(--Light-gray);
 }
 
 .jonathan-section {
@@ -101,18 +101,18 @@ section p {
 
 .jeanette-section,
 .kira-section {
-  color: var(--Very-dark-grayish-blue);
+  color: var(--Very-dark-blackish-blue);
   background-color: var(--White);
 }
 
 .kira-graduate,
 .jeanette-graduate {
-  color: var(--Opacity-very-dark-greyish-blue-50);
+  color: var(--Very-dark-grayish-blue);
 }
 
 .kira-review,
 .jeanette-review {
-  color: rgb(0, 0, 0, 0.3);
+  color: var(--Very-dark-grayish-blue);
 }
 
 .patrick-section {
